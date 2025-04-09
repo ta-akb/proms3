@@ -10,7 +10,7 @@ biomarkers using proteomics data with the help of additional omics views
 (e.g. RNAseq).
 
 
-I edited ProMS to include three additional data integration strategies:
+I edited ProMS to switch three data integration strategies:
 
 1, Late integration: The original ProMS algorithm, 
   which builds separate models for each omics view and combines the results based on selected features.
