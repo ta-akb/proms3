@@ -6,13 +6,14 @@ url = 'https://github.com/bzhanglab/proms'
 
 install_requires = [
     'scikit-survival',
-    'numpy',
-    'scipy',
+    'numpy>=2.2.0',
+    'scipy>=1.14.1',
     'scikit-learn',
-    'pandas',
+    'pandas>=2.2.3',
     'xgboost',
-    'matplotlib',
-    'pyyaml' 
+    'matplotlib>=3.10.0',
+    'pyyaml',
+    'seaborn>=0.13.2'
 ]
 
 
@@ -35,7 +36,7 @@ setup(
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.12.8',
     install_requires=install_requires,
     packages=find_packages(),
     entry_points={"console_scripts": ["proms_train=proms.__main__:main", 
