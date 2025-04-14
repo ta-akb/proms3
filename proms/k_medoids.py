@@ -148,10 +148,35 @@ class KMedoids(BaseEstimator, ClusterMixin, TransformerMixin):
                 "%s was given" % (desc, value)
             )
 
+
+    import numpy as np
+    from sklearn.utils.validation import _check_sample_weight
+
     def _check_normalized_sample_weight(self, sample_weight, X):
-        """Set sample_weight to 1 if None
-           if provided, normalize them to within the range of (0,1)
-        """
+        """Set sample_weight to 1 if None and normalize them within the range of (0,1)"""
+
+        if sample_weight is None:
+            sample_weight = np.ones(X.shape[0], dtype=X.dtype)
+
+            # Check initial sample weights
+        if not np.all(sample_weight >= 0):
+            print("Negative weights found, setting to zero")
+            sample_weight[sample_weight < 0] = 0
+
+        # Normalize weights to be in [0, 1]
+        if sample_weight.sum() > 0:
+            sample_weight /= sample_weight.max()
+        else:
+            print("All weights are zero. Adjusting to one.")
+            sample_weight += 1.0
+
+        return sample_weight
+
+    """
+    def _check_normalized_sample_weight(self, sample_weight, X):
+        #Set sample_weight to 1 if None
+        #if provided, normalize them to within the range of (0,1)
+        
 
         sample_weight_was_none = sample_weight is None
         sample_weight = _check_sample_weight(sample_weight, X, dtype=X.dtype)
@@ -165,7 +190,7 @@ class KMedoids(BaseEstimator, ClusterMixin, TransformerMixin):
                 # 2*(1-sigmoid(x)) -> (0,1), normalized to between 0 and 1
                 sample_weight = 2.0 * (1 / (1 + np.exp(-sample_weight)) - 0.5)
         return sample_weight
-
+    """
     def _check_candidacy(self, candidacy, X):
         """"check candidacy array values"""
 
