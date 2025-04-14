@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 
 __version__ = '1.0.0'
-#url = 'https://github.com/bzhanglab/proms'
+url = 'https://github.com/ta-akb/proms'
 
 install_requires = [
     'scikit-survival>=0.24.1',
@@ -23,8 +23,8 @@ setup(
     description='Protein Markers Selection 3 algorithmsy',
     author='Taiki Akiba',
     author_email='@gmail.com',
-    #url=url,
-    #download_url='{}/archive/{}.tar.gz'.format(url, __version__),
+    url=url,
+    download_url='{}/archive/{}.tar.gz'.format(url, __version__),
     keywords=[
         'machine learning', 'feature selection', 'proteomics',
         'multiomics', 'biomarker', 'genomics', 'bioinformatics'
