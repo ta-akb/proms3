@@ -20,7 +20,7 @@ install_requires = [
 setup(
     name='proms3',
     version=__version__,
-    description='Markers Genes Selection',
+    description='Protein Markers Selection 3 algorithmsy',
     author='Taiki Akiba',
     author_email='@gmail.com',
     #url=url,
