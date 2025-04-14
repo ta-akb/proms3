@@ -103,6 +103,8 @@ def _cor_coeff(X, y):
     """
     pearson correlation coefficient
     """
+    X = np.asarray(X, dtype=np.float64)
+    y = np.asarray(y, dtype=np.float64)
     corr, _ = pearsonr(X, y)
     return corr
 
