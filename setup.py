@@ -41,8 +41,9 @@ setup(
     #packages=find_packages(),
     entry_points={
         "console_scripts": [
-        "proms_train3=proms.__main__:main",
-        "proms_predict3=proms.predict:main"
+        "proms3=proms.__main__:cli_main",
+        "proms3_train=proms.__main__:main",
+        "proms3_predict=proms.predict:main"
         ]
     }
     #entry_points={"console_scripts": ["proms_train=proms.__main__:main", 
