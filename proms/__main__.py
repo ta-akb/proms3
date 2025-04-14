@@ -1261,7 +1261,8 @@ def get_parser():
                         help='include supervised PCA method in the results'
                        )
     return parser
-
+def cli_main():
+    print("This is the proms3 main CLI entry point.")
 
 if __name__ == '__main__':
     multiprocessing.set_start_method('forkserver')
