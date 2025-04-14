@@ -100,6 +100,52 @@ def get_estimator(seed, estimator, prediction_type='cls'):
         svm: sksurv.svm.FastKernelSurvivalSVM
         gbm: sksurv.ensemble.GradientBoostingSurvivalAnalysis
     """
+
+    if isinstance(estimator, str):
+        estimator = [estimator]
+    if not any(est in default_estimators[prediction_type] for est in estimator):
+        print(f'{estimator} is Not supported')
+        #raise ValueError(f'None of the specified estimators are supported. Supported estimators: {default_estimators[prediction_type]}')
+
+    supported_estimators = [est for est in estimator if est in default_estimators[prediction_type]]
+    
+    if not supported_estimators:
+        print(f'{estimator} is Not supported')
+        #raise ValueError(f'estimator {estimator} not supported for prediction type {prediction_type}')
+        return
+
+    estimator = supported_estimators[0]  # Use the first supported estimator
+
+    if prediction_type == 'cls':
+        est_dict = {
+            'lr': LogisticRegression(max_iter=1000, random_state=seed),
+            'rf': RandomForestClassifier(random_state=seed),
+            'svm': SVC(kernel='rbf', probability=True, random_state=seed),
+            'gbm': XGBClassifier(random_state=seed)
+        }
+        return est_dict[estimator]
+
+    if prediction_type == 'reg':
+        est_dict = {
+            'ridge': Ridge(random_state=seed),
+            'rf': RandomForestRegressor(random_state=seed),
+            'svm': SVR(kernel='rbf'),
+            'gbm': XGBRegressor(random_state=seed)
+        }
+        return est_dict[estimator]
+
+    if prediction_type == 'sur':
+        est_dict = {
+            'coxph': CoxPHSurvivalAnalysis(),
+            # 'rf': RandomSurvivalForest(random_state=seed),
+            # 'svm': FastSurvivalSVM(random_state=seed),
+            # 'gbm': GradientBoostingSurvivalAnalysis(random_state=seed)
+        }
+        return est_dict[estimator]
+
+    
+    
+"""
     if not estimator in default_estimators[prediction_type]:
         raise ValueError(f'estimator {estimator} not supported for prediction type {prediction_type}')
 
@@ -129,4 +175,4 @@ def get_estimator(seed, estimator, prediction_type='cls'):
             # 'gbm': GradientBoostingSurvivalAnalysis(random_state=seed)
         }
         return est_dict[estimator]
-    
+"""
