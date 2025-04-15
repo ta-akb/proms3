@@ -32,9 +32,9 @@ branch origin resources
   > conda create -n proms3 python=3.11
   > conda activate proms3
   > conda install -c conda-forge ecos
-  > 
+  
   > pip install git+https://github.com/ta-akb/proms3 
   
   # 実行例 
-  proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
+  > proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
 </code></pre>
