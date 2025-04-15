@@ -29,8 +29,9 @@ branch origin resources
 
 <pre><code>
   # We recommend building a new conda environment.
-  > conda create -n proms3 python=3.12
+  > conda create -n proms3 python=3.11
   > conda activate proms3
+  > conda install -c conda-forge ecos
   > 
   > pip install git+https://github.com/ta-akb/proms3 
   
