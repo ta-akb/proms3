@@ -37,13 +37,13 @@ setup(
     ],
     python_requires='>=3.11',
     install_requires=install_requires,
-    packages=find_packages(include=['proms3.*']),
+    packages=find_packages(include=['proms3', 'proms3.*']),
     #packages=find_packages(),
     entry_points={
         "console_scripts": [
-        "proms3=proms.__main__:cli_main",
-        "proms3_train=proms.__main__:main",
-        "proms3_predict=proms.predict:main"
+        "proms3_train=proms3.__main__:main",
+        "proms3_predict=proms3.predict:main",
+        "proms3=proms3.__main__:cli_main"
         ]
     }
     #entry_points={"console_scripts": ["proms_train=proms.__main__:main", 
