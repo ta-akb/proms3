@@ -50,7 +50,7 @@ proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
 
 ## 📊 Example Output
 
-Here is an example of the result visualization (UMAP of selected features):
+Here is an example of the test file result on terminal:
 
 ![UMAP result](docs/images/results.png)
 
