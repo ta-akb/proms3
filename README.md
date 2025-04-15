@@ -46,6 +46,9 @@ which proms3
 
 # Example execution
 proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
+
+
+### Survival mode and single omics mode are still developing ###
 ```
 </code></pre>
 
