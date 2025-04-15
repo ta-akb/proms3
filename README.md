@@ -25,7 +25,7 @@ branch origin resources
 
 
 ## 📄 Installation
-
+</code></pre>
 ```bash
 # We recommend building a new conda environment
 conda create -n proms3 python=3.11
@@ -45,8 +45,8 @@ which proms3
 
 # Example execution
 proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
-```bash
-
+```
+</code></pre>
 
 ## 📄 Reference
 
