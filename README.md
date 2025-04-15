@@ -27,14 +27,14 @@ branch origin resources
 
 
 
-<pre><code>
+<pre><code>```
   # We recommend building a new conda environment.
-  > conda create -n proms3 python=3.11
-  > conda activate proms3
-  > conda install -c conda-forge ecos
+  conda create -n proms3 python=3.11
+  conda activate proms3
+  conda install -c conda-forge ecos
   
-  > pip install git+https://github.com/ta-akb/proms3 
+  pip install git+https://github.com/ta-akb/proms3 
   
   # 実行例 
-  > proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
-</code></pre>
+  proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
+```</code></pre>
