@@ -1,6 +1,4 @@
-"""Still editing, not exactly working."""
-
-# ProMS: protein marker selection using proteomics or multi-omics data
+# ProMS3: protein marker selection using proteomics or multi-omics data with 3 algorithms
 
 ProMS (*Pro*tein *M*arker *S*election) is a python package designed to tackle a novel problem of multiview
 feature selection: given multiple views of same set of samples,
