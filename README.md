@@ -50,7 +50,7 @@ proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
 
 ## 📊 Example Output
 
-Here is an example of the test file result on terminal:
+Here is an example of the test file result on terminal with results directory creation:
 
 ![UMAP result](docs/images/results.png)
 
