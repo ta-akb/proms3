@@ -21,6 +21,13 @@ I edited ProMS to switch three data integration strategies:
 3, Early (pre) integration: Omics data are integrated prior to model construction.
 
 
-
 branch origin resources
 [Check out the documentation](http://docs.zhang-lab.org/proms/)
+
+
+
+
+<pre><code>```bash pip install git+https://github.com/ta-akb/proms3 
+  
+  # 実行例 
+  proms3_train -f config.yml -d data.yml ```</code></pre>
