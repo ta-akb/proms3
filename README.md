@@ -27,7 +27,7 @@ branch origin resources
 
 
 
-<pre><code>```
+<pre><code>
   # We recommend building a new conda environment.
   conda create -n proms3 python=3.11
   conda activate proms3
@@ -37,4 +37,11 @@ branch origin resources
   
   # 実行例 
   proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
-```</code></pre>
+</code></pre>
+
+
+## 📄 Reference
+
+This package is part of an ongoing research project.  
+The associated manuscript is currently being prepared for submission.
+
