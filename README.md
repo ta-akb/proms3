@@ -27,7 +27,13 @@ branch origin resources
 
 
 
-<pre><code>```bash pip install git+https://github.com/ta-akb/proms3 
+<pre><code>
+  # We recommend building a new conda environment.
+  > conda create proms3 python=3.12
+
+  > 
+  > pip install git+https://github.com/ta-akb/proms3 
   
   # 実行例 
-  proms3_train -f config.yml -d data.yml ```</code></pre>
+  proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
+</code></pre>
