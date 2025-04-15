@@ -29,8 +29,8 @@ branch origin resources
 
 <pre><code>
   # We recommend building a new conda environment.
-  > conda create proms3 python=3.12
-
+  > conda create -n proms3 python=3.12
+  > conda activate proms3
   > 
   > pip install git+https://github.com/ta-akb/proms3 
   
