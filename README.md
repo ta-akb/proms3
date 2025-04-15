@@ -24,18 +24,28 @@ branch origin resources
 
 
 
-## 📄 Instalation
-<pre><code>
-  # We recommend building a new conda environment.
-  conda create -n proms3 python=3.11
-  conda activate proms3
-  conda install -c conda-forge ecos
-  
-  pip install git+https://github.com/ta-akb/proms3 
-  
-  # 実行例 
-  proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
-</code></pre>
+## 📄 Installation
+
+```bash
+# We recommend building a new conda environment
+conda create -n proms3 python=3.11
+conda activate proms3
+
+# Install dependencies
+conda install -c conda-forge ecos
+
+# Install proms3 directly from GitHub
+pip install git+https://github.com/ta-akb/proms3
+
+# Confirm installation
+which proms3
+# This should show the path to the installed CLI if successful
+
+# Download the test_files directory and navigate into it
+
+# Example execution
+proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
+
 
 
 ## 📄 Reference
