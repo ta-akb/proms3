@@ -61,3 +61,12 @@ Here is an example of the test file result on terminal with results directory cr
 This package is part of an ongoing research project.  
 The associated manuscript is currently being prepared for submission.
 
+
+## 🛡 License
+
+This project is a fork of [Zhiao Shi's original work](https://github.com/zhiao/proms),  
+which is licensed under the [MIT License](LICENSE).
+
+Modifications and extensions by Taiki Akiba (2025) are also released under the MIT License.
+
+
