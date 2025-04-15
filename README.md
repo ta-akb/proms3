@@ -24,7 +24,7 @@ branch origin resources
 
 
 
-## 💻 Installation
+## 💻 Installation and Run ProMS3
 </code></pre>
 ```bash
 # We recommend building a new conda environment
