@@ -12,17 +12,15 @@ biomarkers using proteomics data with the help of additional omics views
 
 I edited ProMS to switch three data integration strategies:
 
-1, Late integration: The original ProMS algorithm, 
+1, Late integration (post): The original ProMS algorithm, 
   which builds separate models for each omics view and combines the results based on selected features.
 
-2, Mid integration: During model construction,
+2, Mid integration (mid): During model construction,
   both test and control groups must include at least one replicate from each omics view.
 
 3, Early (pre) integration: Omics data are integrated prior to model construction.
 
 
 
-
-
-original resources
+branch origin resources
 [Check out the documentation](http://docs.zhang-lab.org/proms/)
