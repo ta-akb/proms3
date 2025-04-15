@@ -40,6 +40,7 @@ pip install git+https://github.com/ta-akb/proms3
 # Confirm installation
 which proms3
 # This should show the path to the installed CLI if successful
+# ex, /opt/homebrew/Caskroom/miniforge/base/envs/test2/bin/proms3
 
 # Download the test_files directory and navigate into it
 
