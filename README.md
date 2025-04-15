@@ -67,7 +67,7 @@ Mid-combined → target_view: all_omics_mid
 Post-combined → target_view: all_omics_post
 
 
-Please refer to the sample data and Shi's homepage for the data structure and settings.
+Please refer to the sample data files and Shi's homepage for the data structure and settings.
 
 
 ## 📄 Reference
