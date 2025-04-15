@@ -1267,5 +1267,5 @@ def cli_main():
     print("This is the proms3 main CLI entry point.")
 
 if __name__ == '__main__':
-    multiprocessing.set_start_method('forkserver')
+    multiprocessing.set_start_method("fork", force=True)
     main()
