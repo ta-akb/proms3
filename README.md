@@ -59,8 +59,11 @@ Here is an example of the test file result on terminal with results directory cr
 ![UMAP result](docs/images/results.png)
 
 Algorithms are able to be changed target_view in conf yml file.
+
 Pre-combined → target_view: all_omics_pre
+
 Mid-combined → target_view: all_omics_mid
+
 Post-combined → target_view: all_omics_post
 
 
