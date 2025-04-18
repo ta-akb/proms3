@@ -1,18 +1,18 @@
 ---
-project_name: crc
-data_directory: crc_data
-train_data_directory: train_data
-target_view: all_omics_pre
-target_label: msi
+project_name: 'crc'
+data_directory: 'crc_data'
+train_data_directory: 'train_data'
+target_view: 'all_omics_pre'
+target_label: 'msi'
 
 data:
   train:
     label:
-      file: IDs.tsv
+      file: 'IDs.tsv'
     view:
-    - type: rna
-      file: Scores_RNA.tsv
-    - type: pro
-      file: Scores_Pro.tsv
-    - type: acc
-      file: Scores_Acc.tsv
+      - type: 'rna'
+        file: 'Scores_RNA.tsv'
+      - type: 'pro'
+        file: 'Scores_Pro.tsv'
+      - type: 'acc'
+        file: 'Scores_Acc.tsv'
