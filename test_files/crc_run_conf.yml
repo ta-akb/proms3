@@ -1,19 +1,19 @@
 ---
 repeat: 2
 k:
-- 5
-- 10
-- 15
+  - 5
+  - 10
+  - 15
 estimators:
-- lr
-- rf
-- svm
-- gbm
-#- ridge
-- gbm
-#- coxp
+  - 'lr'
+  - 'rf'
+  - 'svm'
+  - 'gbm'
+  # - 'ridge'
+  - 'gbm'
+  # - 'coxp'
 percentile:
-- 5
-- 10
-- 15
+  - 5
+  - 10
+  - 15
 n_jobs: 20
