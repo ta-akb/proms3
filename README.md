@@ -75,6 +75,8 @@ Here is an example of the test file result on terminal with results directory cr
 
 ![UMAP result](docs/images/results.png)
 
+The estimated time for calculation to complete with this file is approximately a few minutes on a Mac M1 system.
+
 Algorithms are able to be changed target_view in conf yml file.
 
 Pre-integration → target_view: all_omics_pre  
