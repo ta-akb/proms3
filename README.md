@@ -44,6 +44,13 @@ which proms3
 
 # Download the test_files directory and navigate into it
 
+# Directory Structures
+Download test files as row formats and place them in the following structure:
+
+![UMAP result](docs/images/directory_structures.png)
+
+
+
 # Example execution
 proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
 
@@ -51,6 +58,7 @@ proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
 ### Survival mode and single omics mode are still developing ###
 ```
 </code></pre>
+
 
 ## 📊 Example Output
 
