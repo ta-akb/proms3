@@ -55,8 +55,9 @@ Download the test files in raw format and place them in the following directory 
 ```
 </code></pre>
 
-![UMAP result](docs/images/directory_structures.png)
-
+<p align="center">
+  <img src="docs/images/directory_structures.png" alt="Directory Structure" width="400"/>
+</p>
 
 </code></pre>
 ```
