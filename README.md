@@ -46,12 +46,14 @@ which proms3
 
 # Directory Structures
 Download test files as row formats and place them in the following structure:
+```
 </code></pre>
 
 ![UMAP result](docs/images/directory_structures.png)
 
 
 </code></pre>
+```
 # Example execution
 proms3_train -f crc_run_conf.yml -d crc_data_conf3_pre.yml
 
