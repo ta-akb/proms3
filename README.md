@@ -41,11 +41,17 @@ pip install git+https://github.com/ta-akb/proms3
 which proms3
 # This should show the path to the installed CLI if successful
 # ex, /opt/homebrew/Caskroom/miniforge/base/envs/proms3/bin/proms3
+```
+</code></pre>
 
-# Download the test_files directory and navigate into it
+## 📁 Test File Setup
+</code></pre>
+```bash
 
-# Directory Structures
-Download test files as row formats and place them in the following structure:
+Download the test files in raw format and place them in the following directory structure:
+
+📂 Output directories and result files will be automatically generated with a timestamp when the run is completed.
+
 ```
 </code></pre>
 
