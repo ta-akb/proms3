@@ -1095,27 +1095,42 @@ def check_data_config(config_file):
                         f'required fields: {sorted(train_required_fields)}')
 
 
+import os
+import yaml
+from pathlib import Path  # ← 追加: より信頼性の高いパス操作のため
+
 def create_dataset(config_file, output_run):
-    """ create data structure from input data files """
-    print(f'data config file: {config_file}')
+    """Create data structure from input data files."""
+    print(f'Data config file: {config_file}')
     check_data_config(config_file)
-    with open(config_file) as config_fh:
+
+    # パスを pathlib で安全に扱う
+    config_path = Path(config_file).resolve()
+
+    with config_path.open(encoding='utf-8') as config_fh:
         data_config = yaml.load(config_fh, Loader=yaml.FullLoader)
         data_root = data_config['data_directory']
-        if not os.path.isabs(data_root):
-            # relative to the data config file
-            config_root = os.path.abspath(os.path.dirname(config_file))
-            data_root = os.path.join(config_root, data_root)
-        ds_name = data_config['project_name']
-    all_data = Dataset(name=ds_name, root=data_root, config_file=config_file,output_dir=output_run)()
-    print(f'Create_Dataset:{all_data}')
-    
-    view_names = all_data['desc']['view_names']
-    if isinstance(view_names, list) and all(isinstance(v, str) for v in view_names):
-        pass
-    else:
-        print(f"Unexpected data type or content in 'views': {view_names}")
         
+        if not os.path.isabs(data_root):
+            # config ファイルのあるディレクトリからの相対パスとして処理
+            data_root = config_path.parent / data_root
+        
+        data_root = Path(data_root).resolve()
+        ds_name = data_config['project_name']
+
+    all_data = Dataset(
+        name=ds_name,
+        root=str(data_root),
+        config_file=str(config_path),
+        output_dir=output_run
+    )()
+
+    print(f'Create_Dataset: {all_data}')
+
+    view_names = all_data['desc']['view_names']
+    if not (isinstance(view_names, list) and all(isinstance(v, str) for v in view_names)):
+        print(f"[WARNING] Unexpected data type or content in 'views': {view_names}")
+
     return all_data
 
 
